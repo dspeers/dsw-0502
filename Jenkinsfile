@@ -19,7 +19,7 @@ pipeline {
       stage('Testing') {
         parallel {
           stage('Java 9') {
-            agent { label 'jdk8' }
+            agent { label 'jdk9' }
             steps {
               container('maven9') {
                 sh 'mvn -v'
